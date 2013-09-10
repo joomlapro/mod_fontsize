@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_fontsize</name>
+	<author>Bruno Batista</author>
+	<creationDate>Sep 2013</creationDate>
+	<copyright>Copyright (C) 2013 AtomTech IT Services. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>bruno@atomtech.com.br</authorEmail>
+	<authorUrl>http://www.atomtech.com.br</authorUrl>
+	<version>1.0</version>
+	<description>MOD_FONTSIZE_XML_DESCRIPTION</description>
+	<scriptfile />
+	<files>
+		<filename module="mod_fontsize">mod_fontsize.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_fontsize.xml</filename>
+		<folder>tmpl</folder>
+	</files>
+	<media destination="mod_fontsize" folder="media">
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<filename>index.html</filename>
+	</media>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_fontsize.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_fontsize.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_fontsize.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_fontsize.sys.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_fontsize.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_fontsize.sys.ini</language>
+	</languages>
+	<config>
+		<fields
+			name="params">
+			<fieldset
+				name="basic">
+				<field
+					name="targetSection"
+					type="textarea"
+					class="inputbox"
+					cols="30"
+					rows="3"
+					default="#content .post"
+					label="MOD_FONTSIZE_FIELD_TARGET_SECTION_LABEL"
+					description="MOD_FONTSIZE_FIELD_TARGET_SECTION_DESC" />
+				<field
+					name="store"
+					type="radio"
+					class="btn-group"
+					default="1"
+					filter="integer"
+					label="MOD_FONTSIZE_FIELD_STORE_LABEL"
+					description="MOD_FONTSIZE_FIELD_STORE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="appendTo"
+					type="text"
+					size="40"
+					class="inputbox"
+					default="#rvfs-controllers"
+					label="MOD_FONTSIZE_FIELD_APPEND_TO_LABEL"
+					description="MOD_FONTSIZE_FIELD_APPEND_TO_DESC" />
+				<field
+					name="showResetButton"
+					type="radio"
+					class="btn-group"
+					default="1"
+					filter="integer"
+					label="MOD_FONTSIZE_FIELD_SHOWRESETBUTTON_LABEL"
+					description="MOD_FONTSIZE_FIELD_SHOWRESETBUTTON_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option value="itemid" />
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
