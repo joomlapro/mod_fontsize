@@ -74,6 +74,25 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
+				<field
+					name="spacer1"
+					type="spacer"
+					class="text"
+					hr="true"
+					label="MOD_FONTSIZE_FIELD_SPACER1_LABEL" />
+				<field
+					name="direction"
+					type="list"
+					default="top"
+					class="inputbox"
+					filter="string"
+					label="MOD_FONTSIZE_FIELD_DIRECTION_LABEL"
+					description="MOD_FONTSIZE_FIELD_DIRECTION_DESC">
+					<option value="left">MOD_FONTSIZE_OPTION_TOOLTIP_LEFT</option>
+					<option value="top">MOD_FONTSIZE_OPTION_TOOLTIP_TOP</option>
+					<option value="bottom">MOD_FONTSIZE_OPTION_TOOLTIP_BOTTOM</option>
+					<option value="right">MOD_FONTSIZE_OPTION_TOOLTIP_RIGHT</option>
+				</field>
 			</fieldset>
 			<fieldset
 				name="advanced">
