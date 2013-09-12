@@ -27,11 +27,10 @@ $doc = JFactory::getDocument();
 // Build the script.
 $script = array();
 $script[] = 'jQuery(document).ready(function($) {';
-$script[] = '  $.rvFontsize({';
+$script[] = '  $(\'' . $appendTo . '\').rvFontsize({';
 $script[] = '    targetSection: \'' . $targetSection . '\',';
 $script[] = '    store: ' . $store . ',';
 $script[] = '    controllers: {';
-$script[] = '      append: false';
 $script[] = '    }';
 $script[] = '  });';
 $script[] = '});';
@@ -41,6 +40,8 @@ $doc->addScriptDeclaration(implode("\n", $script));
 ?>
 <ul id="rvfs-controllers" class="fontsize-controllers list-unstyled<?php echo $moduleclass_sfx; ?>">
 	<li><a href="#" class="rvfs-decrease" title="<?php echo JText::_('MOD_FONTSIZE_FONT_DECREASE'); ?>"><i class="icon-font"></i>-</a></li>
-	<li><a href="#" class="rvfs-reset disabled" title="<?php echo JText::_('MOD_FONTSIZE_FONT_RESET'); ?>"><i class="icon-font"></i></a></li>
+	<?php if ($showResetButton): ?>
+		<li><a href="#" class="rvfs-reset disabled" title="<?php echo JText::_('MOD_FONTSIZE_FONT_RESET'); ?>"><i class="icon-font"></i></a></li>
+	<?php endif; ?>
 	<li><a href="#" class="rvfs-increase" title="<?php echo JText::_('MOD_FONTSIZE_FONT_INCREASE'); ?>"><i class="icon-font"></i>+</a></li>
 </ul>
