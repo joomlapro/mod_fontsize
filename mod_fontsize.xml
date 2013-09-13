@@ -93,6 +93,17 @@
 					<option value="bottom">MOD_FONTSIZE_OPTION_TOOLTIP_BOTTOM</option>
 					<option value="right">MOD_FONTSIZE_OPTION_TOOLTIP_RIGHT</option>
 				</field>
+				<field
+					name="loadCss"
+					type="radio"
+					class="btn-group"
+					default="1"
+					filter="integer"
+					label="MOD_FONTSIZE_FIELD_LOADCSS_LABEL"
+					description="MOD_FONTSIZE_FIELD_LOADCSS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			</fieldset>
 			<fieldset
 				name="advanced">

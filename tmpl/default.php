@@ -11,8 +11,11 @@
 // No direct access.
 defined('_JEXEC') or die;
 
-// Load Stylesheet.
-JHtml::stylesheet('mod_fontsize/template.css', false, true, false);
+if ($loadCss)
+{
+	// Load Stylesheet.
+	JHtml::stylesheet('mod_fontsize/template.css', false, true, false);
+}
 
 // Load JavaScript.
 JHtml::script('mod_fontsize/store.min.js', false, true);

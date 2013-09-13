@@ -18,6 +18,7 @@ $store           = $params->get('store', 1) ? 'true' : 'false';
 $appendTo        = htmlspecialchars($params->get('appendTo', '#rvfs-controllers'));
 $showResetButton = $params->get('showResetButton', 1);
 $direction       = (string) $params->get('direction', 'bottom');
+$loadCss         = $params->get('loadCss', 1);
 
 // Render the module.
 require JModuleHelper::getLayoutPath('mod_fontsize', $params->get('layout', 'default'));
